@@ -47,6 +47,7 @@ class Activity extends CI_Controller {
 		// $this->load->view('layout/header');
 		$this->load->view('activity/update/content', $data);
 		$this->load->view('layout/footer');
+		$this->load->view('activity/update/script');
 		$this->load->view('layout/foot');
     }
 
