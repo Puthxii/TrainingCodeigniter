@@ -34,7 +34,8 @@
                     <td><?php echo change_date_format($obj->start_date).' - '.change_date_format($obj->end_date); ?></td>
                     <td>
                         <a href="<?php echo base_url('activity/update/'.$obj->activity_id);  ?>" ><button type="button" class="btn btn-warning">Edit</button></a>
-                        <a href="<?php echo base_url('activity/delete');  ?>" ><button type="button" class="btn btn-danger">Delete</button></a>
+                        <a href="<?php echo base_url('activity/delete/'.$obj->activity_id);  ?>" ><button type="button" class="btn btn-danger" 
+                        onclick="return confirm('Are you sure? want to delete this item');">Delete</button></a>
                     </td>
                 </tr>
             <?php  } ?>

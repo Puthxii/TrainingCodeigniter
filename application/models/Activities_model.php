@@ -34,4 +34,9 @@ private $table_name = 'tbl_activities';
         return $result->row();
     }
 
+    public function delete($activity_id){
+        $result = $this->db->delete($this->table_name, array('activity_id' => $activity_id));
+        return $result;
+    }
+
 }
