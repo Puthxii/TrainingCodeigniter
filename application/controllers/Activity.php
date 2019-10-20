@@ -51,13 +51,13 @@ class Activity extends CI_Controller {
 		$this->load->view('layout/foot');
     }
 
-    function delete(){
-        $this->load->view('layout/head');
-		$this->load->view('layout/menu');
-		// $this->load->view('layout/header');
-		$this->load->view('activity/delete/content');
-		$this->load->view('layout/footer');
-		$this->load->view('layout/foot');
+    function delete($activity_id){
+		$result = $this->activities_model->delete($activity_id);
+		if($result){
+			redirect('activity');
+		}else{
+
+		}
 	}
 
 	function save(){
